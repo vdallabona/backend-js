@@ -1,12 +1,15 @@
 const express = require('express')
 const app = express()
 const port = 3000
+app.use(express.json())
 
-app.get('/exercicio1/', (req, res) => {
-  const num1 = req.query.num1
-  const num2 = req.query.num2
+app.post("/exercicio1/", (req, res) => {
+  const num1 = req.body.num1
+  const num2 = req.body.num2
   const resultado = Number(num1) + Number(num2)
-  res.json({ resultado })
+
+  //muda o status, pesquisar mais sobre 👍
+  res.status(201).json({ resultado: resultado })
 })
 
 app.get('/exercicio2/', (req, res) => {
@@ -36,6 +39,17 @@ app.get('/exercicio5/', (req, res) => {
   const distancia = req.query.distancia
   const resultado = (distancia * 1.60934)
   res.json({ resultado })
+})
+
+app.post("/exercicio6/", (req, res) => {
+  const num1 = req.body.num1
+  
+  var horas = Math.floor((num1 / 60)/60)
+  var minutos = Math.floor((num1 - horas * 3600) / 60)
+  var segundos = num1 - ((minutos * 60) + (horas * 3600))
+
+  res.status(201).json({ horas: horas, minutos, segundos })
+
 })
 
 app.listen(port, () => {
