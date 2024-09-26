@@ -1,4 +1,4 @@
-const Funcoes = require('./Exercicios/Exercicio1')
+const Funcoes = require('./Services/Exercicios') //javascript faz dessa variável em array
 const express = require('express')
 const app = express()
 const port = 3000
@@ -50,8 +50,8 @@ app.post("/exercicio7/", (req, res) => {
   const num1 = req.body.num1
   const resultado = Funcoes.Exercicio7(num1)
   res.status(201).json({
-    metros: resultado[1] ,
-    centimetros: resultado[2]
+    metros: resultado[0] ,
+    centimetros: resultado[1]
   })
 })
 

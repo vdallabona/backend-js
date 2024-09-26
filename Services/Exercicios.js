@@ -1,4 +1,7 @@
 function Exercicio1(num1, num2){
+    if(isNaN(num1) || isNaN(num2)){
+        return 'não é um número'
+    }
     const resultado = Number(num1) + Number(num2)
     return resultado
 }
@@ -35,8 +38,8 @@ function Exercicio7(num1){
     var metros = Math.floor(num1 * 1000)
     var centimetros = Math.floor(num1 * 100000) - metros * 100
     var resultado = [];
-    resultado[1] = metros
-    resultado[2] = centimetros
+    resultado[0] = metros
+    resultado[1] = centimetros
     return resultado
 }
 
