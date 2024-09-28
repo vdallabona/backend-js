@@ -2,7 +2,7 @@ function Exercicio1(num1, num2){
     if(isNaN(num1) || isNaN(num2)){
         return 'não é um número'
     }
-    const resultado = Number(num1) + Number(num2)
+    const resultado = Number((Number(num1) + Number(num2)).toFixed(2))
     return resultado
 }
 
