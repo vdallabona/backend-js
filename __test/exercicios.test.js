@@ -1,4 +1,4 @@
-const Funcoes = require('../Services/Exercicios')
+const Funcoes = require('../src/Services/Exercicios')
 const { describe, it, expect } = require('@jest/globals')
 
 describe('testando a função somar: ', () => {
@@ -39,23 +39,23 @@ describe('testando a função somar: ', () => {
     })
 
     it('Somar número e letra', () => {
-        const resultado = Funcoes.Exercicio1(2 , 'a')
-        expect(resultado).toBe('não é um número')
+        const funSomar = () => Funcoes.Exercicio1(2 , 'a') // a arrow function está aqui para atrasar a função
+        expect(funSomar).toThrow('não é um número') // eu não espero ele ser(tobe) alguma coisa, eu espero ele jogar um erro(throw)
     })
 
     it('Somar letra e número', () => {
-        const resultado = Funcoes.Exercicio1('a' , 2)
-        expect(resultado).toBe('não é um número')
+        const funSomar = () => Funcoes.Exercicio1('a' , 2)
+        expect(funSomar).toThrow('não é um número')
     })
 
     it('Somar número inteiro  e vazio', () => {
-        const resultado = Funcoes.Exercicio1(2 , )
-        expect(resultado).toBe('não é um número')
+        const funSomar = () => Funcoes.Exercicio1(2 , )
+        expect(funSomar).toThrow('não é um número')
     })
     
     it('Receber apenas um número', () => {
-        const resultado = Funcoes.Exercicio1(2)
-        expect(resultado).toBe('não é um número')
+        const funSomar = () => Funcoes.Exercicio1(2)
+        expect(funSomar).toThrow('não é um número')
     })
 
     it('Somar números grandes positivos', () => {
