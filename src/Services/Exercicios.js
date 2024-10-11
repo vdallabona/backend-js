@@ -1,4 +1,4 @@
-class ServicesExericios {
+class ServicesExercicios {
 
     Exercicio1(num1, num2) {
         if (isNaN(num1) || isNaN(num2)) {
@@ -78,4 +78,4 @@ class ServicesExericios {
     }
 }
 
-module.exports = new ServicesExericios()
+module.exports = new ServicesExercicios()

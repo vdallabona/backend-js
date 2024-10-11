@@ -1,10 +1,10 @@
-const ServicesExericios = require('../Services/Exercicios')
+const ServicesExercicios = require('../Services/Exercicios')
 
-class ControllersExericios {
+class ControllersExercicios {
 
     Exercicio1(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio1(req.body.num1, req.body.num2)
+            const resultado = ServicesExercicios.Exercicio1(req.body.num1, req.body.num2)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -13,7 +13,7 @@ class ControllersExericios {
 
     Exercicio2(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio2(req.body.valor, req.body.horas)
+            const resultado = ServicesExercicios.Exercicio2(req.body.valor, req.body.horas)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -22,7 +22,7 @@ class ControllersExericios {
 
     Exercicio3(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio3(req.body.peso1, req.body.peso2, req.body.peso3, req.body.peso4, req.body.peso5)
+            const resultado = ServicesExercicios.Exercicio3(req.body.peso1, req.body.peso2, req.body.peso3, req.body.peso4, req.body.peso5)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -31,7 +31,7 @@ class ControllersExericios {
 
     Exercicio4(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio4(req.body.temperatura)
+            const resultado = ServicesExercicios.Exercicio4(req.body.temperatura)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -40,7 +40,7 @@ class ControllersExericios {
 
     Exercicio5(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio5(req.body.distancia)
+            const resultado = ServicesExercicios.Exercicio5(req.body.distancia)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -49,7 +49,7 @@ class ControllersExericios {
 
     Exercicio6(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio6(req.body.num1)
+            const resultado = ServicesExercicios.Exercicio6(req.body.num1)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -58,7 +58,7 @@ class ControllersExericios {
 
     Exercicio7(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio7(req.body.num1)
+            const resultado = ServicesExercicios.Exercicio7(req.body.num1)
             res.status(201).json({ resultado: resultado[0] + " kilômetros, " + resultado[1] + " metros e " + resultado[2] + " centímentros." })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -67,7 +67,7 @@ class ControllersExericios {
 
     Exercicio8(req, res) {
         try {
-            const resultado = ServicesExericios.Exercicio8(req.body.num1)
+            const resultado = ServicesExercicios.Exercicio8(req.body.num1)
             res.status(201).json({ resultado: resultado })
         } catch (e) {
             res.status(422).json({ resultado: e.message })
@@ -76,4 +76,4 @@ class ControllersExericios {
 
 }
 
-module.exports = new ControllersExericios()
+module.exports = new ControllersExercicios()
