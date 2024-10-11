@@ -1,22 +1,22 @@
 const express = require('express');
-const ControllersExericios = require('../controllers/exercicios')
+const ControllersExercicios = require('../controllers/exercicios')
 
 const router = express.Router()
 
-router.post("/Exercicio1/", ControllersExericios.Exercicio1)
+router.post("/Exercicio1/", ControllersExercicios.Exercicio1)
 
-router.post('/Exercicio2/', ControllersExericios.Exercicio2)
+router.post('/Exercicio2/', ControllersExercicios.Exercicio2)
 
-router.post('/Exercicio3/', ControllersExericios.Exercicio3)
+router.post('/Exercicio3/', ControllersExercicios.Exercicio3)
 
-router.post('/Exercicio4/', ControllersExericios.Exercicio4)
+router.post('/Exercicio4/', ControllersExercicios.Exercicio4)
 
-router.post('/Exercicio5/', ControllersExericios.Exercicio5)
+router.post('/Exercicio5/', ControllersExercicios.Exercicio5)
 
-router.post("/Exercicio6/", ControllersExericios.Exercicio6)
+router.post("/Exercicio6/", ControllersExercicios.Exercicio6)
 
-router.post("/Exercicio7/", ControllersExericios.Exercicio7)
+router.post("/Exercicio7/", ControllersExercicios.Exercicio7)
 
-router.post("/Exercicio8/", ControllersExericios.Exercicio8)
+router.post("/Exercicioc8/", ControllersExercicios.Exercicio8)
 
 module.exports = router;
